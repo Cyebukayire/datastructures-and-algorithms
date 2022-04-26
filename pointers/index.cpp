@@ -2,9 +2,14 @@
 using namespace std;
 
 int main(){
-    int i = 15,j,*p,*q;
+    int i = 15,k,j,*p,*q;
     p = &i;// keeping the address of i
+    // k=23;
+    // cout<<"k addr: "<<&k<<endl;
     cout<<"P: " << p << endl;
+    // p++;
+    // cout<<"k addr: "<<p<<endl;
+    // cout<<"q addr: "<<q<<endl;
     cout<<"i: " <<i << endl;
     *p = 20; // Assigning value 20 to variable at this address
     cout<<"i: " <<i<<endl;
