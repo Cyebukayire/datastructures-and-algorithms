@@ -28,5 +28,10 @@ int main(){
         cout<<"sum: "<<sum<<endl;
     }
 
+    // cout<<"Output: ";
+    // int b[20], *c = b;
+    // delete [] c;
+    // int n = 10, *k = &n;
+    // delete k;
     return 0;
 }
