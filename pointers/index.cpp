@@ -18,6 +18,16 @@ int main(){
     j = 2**p; // 2 times value stored in the address that p holds (*P)
     cout<<"j: "<<j<<endl;
 
+    cout<<"p: "<<p<<endl;
+    
+    int var =23;
+    int *ptr = &var;
+        // **ptr = 30;
+    cout<<"ptr: "<<*ptr<<endl;
+
+    int n = 5, *s = &n, &r = n;
+cout << n << ' ' << *s << ' ' << r << endl;
+
     // delete p; // this can't delete the pointer
     /* use delete p; to end program peacefully and to prevent further leakage*/
     
