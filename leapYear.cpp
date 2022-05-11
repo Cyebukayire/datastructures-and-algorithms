@@ -7,6 +7,7 @@ void isLeapyr(int year){
 void notLeapyr(int year){
     cout<<endl<<year<<" is not a leap year!"<<endl;
 }
+
 void leap(int yr1, int yr2) {
     int arr[2] = {yr1, yr2};
     int year;
@@ -36,6 +37,7 @@ void leap(int yr1, int yr2) {
     }
 int main() {
     leap(2022, 2024);
+    leap(1994, 2008);
         end:
     return 0;
 }
