@@ -3,11 +3,9 @@ using namespace std;
 
 void isLeapyr(int year){
     cout<<endl<<year<<" is a leap year!"<<endl; 
-    // goto end;
 }
 void notLeapyr(int year){
     cout<<endl<<year<<" is not a leap year!"<<endl;
-    // goto end;
 }
 void leap(int yr1, int yr2) {
     int arr[2] = {yr1, yr2};
@@ -20,14 +18,18 @@ void leap(int yr1, int yr2) {
                 if(year%100==0){
                     if(year%400==0){
                         isLeapyr(year);
+                        continue;
                     }else{
                         notLeapyr(year);
+                        continue;
                     }
                 }else{
                     isLeapyr(year);
+                    continue;
                 }
             }else {
                 notLeapyr(year);
+                continue;
             }
                      
         }
