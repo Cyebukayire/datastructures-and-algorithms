@@ -36,7 +36,7 @@ void leap(int yr1, int yr2) {
         }
     }
 int main() {
-    leap(2022, 2024);
+//     leap(2022, 2024);
     leap(1994, 2008);
         end:
     return 0;
