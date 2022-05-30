@@ -15,7 +15,8 @@ int main(){
     cout<<"i: " <<i<<endl;
     cout<<"*p: "<<*p<<endl; // Outputs the value in this address that pointer p holds
 
-    j = 2**p; // 2 times value stored in the address that p holds (*P)
+    j = 2**p; 
+    // 2 times value stored in the address that p holds (*P)
     cout<<"j: "<<j<<endl;
 
     cout<<"p: "<<p<<endl;
@@ -29,6 +30,7 @@ int main(){
 cout << n << ' ' << *s << ' ' << r << endl;
 
     // delete p; can't delete the pointer
+    
     /* use delete p; to end program peacefully and to prevent further leakage*/
     
     // p = 0; // atleast this forces p to point to null when we don't want it to point to any variable anymore
