@@ -8,7 +8,9 @@ int func(const int num){
     return num;
 }
 int main(){
+    
     // char name[3] = 'P';
+    
     const int num = 23;
     string fname = "Kaliza"; // Strings preffer double quoatations
     const char cars[]= "Ferrari"; //char with string prefers double quoatation
