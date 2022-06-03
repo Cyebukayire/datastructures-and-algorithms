@@ -1,5 +1,4 @@
 // C++ program for insertion sort
-// #include <stdc++.h>
 #include <stdio.h>
 using namespace std;
 /* Function tomem sort an array using insertion sort*/
