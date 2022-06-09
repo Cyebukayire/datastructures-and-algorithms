@@ -1,3 +1,8 @@
+
+#include <iostream>
+
+using namespace std;
+
 // C++ program for insertion sort
 #include <stdio.h>
 using namespace std;
@@ -31,9 +36,6 @@ void printArray(int arr[], int n)
 /* Driver code */
 int main()
 {
-    int arr[] = {12, 11, 13, 5, 6};
-    int n = sizeof(arr) / sizeof(arr[0]);
-    insertionSort(arr, n);
-    printArray(arr, n);
+    cout << "Hello Insertion Sorting";
     return 0;
 }
