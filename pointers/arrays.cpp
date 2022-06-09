@@ -21,6 +21,7 @@ int main(){
     cout<<"a value: "<<*q<<endl;
     q++;
     cout<<*q<<endl;
+    
     // a++ //gives an compilation error because a is a pointer annotation.
 
     for(int sum=*a, *p=a+1; p<a+5; p++){
@@ -33,5 +34,6 @@ int main(){
     // delete [] c;
     // int n = 10, *k = &n;
     // delete k;
+    
     return 0;
 }

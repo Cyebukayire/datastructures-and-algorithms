@@ -12,5 +12,6 @@ int main(){
     short y = 0b00110010;
     cout<<x+y;
     return 0;
+    
     // return EXIT_SUCCESS
 }
