@@ -1,22 +1,35 @@
 #include <iostream>
 using namespace std;
-int findFibonacci(int n)
+
+void starsDecreasing(int n)
 {
+    for (int i = 0; i < n; i++)
+    {
+        cout << "*";
+    }
+    cout << endl;
     if (n == 0)
     {
-        return 0;
+        return;
     }
-    else if (n == 1)
+    starsDecreasing(n - 1);
+}
+void starsIncreasing(int n)
+{
+    for (int i = 0; i < n; i++)
     {
-        return 1;
+        cout << "*";
     }
-    else
+    cout << endl;
+    if (n == 5)
     {
-        return findFibonacci(n - 1) + findFibonacci(n - 2);
+        return;
     }
+    starsIncreasing(n + 1);
 }
 int main()
 {
-    cout << "\nFibonacci => " << findFibonacci(5) << endl
-         << endl;
+    starsDecreasing(5);
+    starsIncreasing(0);
+    return 0;
 }
