@@ -1,15 +1,24 @@
+// Fibonacci is a function that returns the sum of all numbers less than the original number
+
 #include <iostream>
 using namespace std;
-int fn(int n)
+int findFibonacci(int n)
 {
-    if (n == 1)
-        return 1;
     if (n == 0)
+    {
         return 0;
-    return fn(n - 1) + fn(n - 2);
+    }
+    else if (n == 1)
+    {
+        return 1;
+    }
+    else
+    {
+        return findFibonacci(n - 1) + findFibonacci(n - 2);
+    }
 }
 int main()
 {
-    cout << fn(5) << endl;
-    return 0;
+    cout << "\nFibonacci => " << findFibonacci(5) << endl
+         << endl;
 }
