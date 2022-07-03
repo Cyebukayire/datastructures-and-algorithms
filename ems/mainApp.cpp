@@ -4,12 +4,13 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <fstream>
+#include <vector>
 
 using namespace std;
 
 const int maxrow = 20;
-string empName[maxrow] = {};
-string empID[maxrow] = {};
+vector<string> empName = {};
+vector<string> empID = {};
 
 void openFile()
 {
@@ -50,13 +51,11 @@ void viewEmployees()
     cout << "===========\n";
     cout << "\nEmpID \t\t|\t\t EmpName\n";
     cout << "\t_______________________\n\n";
-    for (int i = 0; i < maxrow; i++)
+    int index = 0;
+    for (string i : empID)
     {
-        if (empID[i] == "\0")
-        {
-            break;
-        }
-        cout << empID[i] << "\t\t\t\t" << empName[i] << endl;
+        cout << i << "\t\t\t\t" << empName[index] << endl;
+        index++;
     }
 }
 
@@ -70,40 +69,26 @@ void createEmployee()
     cout << "\nEnter your name: ";
     getline(cin, name);
     cout << endl;
-    // cout << "Hello, " << name << ", you ID is: " << id << endl;
-
-    for (int i = 0; i < maxrow; i++)
-    {
-        if (empID[i] == "\0")
-        {
-            empID[i] = id;
-            empName[i] = name;
-            cout << "Employee is created successfully." << endl;
-            break;
-        }
-    }
+    empID.push_back(id);
+    empName.push_back(name);
+    cout << "Employee is created successfully." << endl;
 }
 
 void searchEmployee()
 {
     string id;
-    bool found = false;
     cin.ignore();
     cout << "\nEnter the employee ID: ";
     getline(cin, id);
-
-    for (int i = 0; i < maxrow; i++)
+    vector<string>::iterator i = find(empID.begin(), empID.end(), id);
+    if (i != empID.end())
     {
-        if (empID[i] == id)
-        {
-            found = true;
-            cout << "\nEmpID \t\t|\t\t EmpName\n";
-            cout << "\t_______________________\n\n";
-            cout << empID[i] << "\t\t\t\t" << empName[i] << endl;
-            break;
-        }
+        int index = distance(empID.begin(), i);
+        cout << "\nEmpID \t\t|\t\t EmpName\n";
+        cout << "\t_______________________\n\n";
+        cout << empID[index] << "\t\t\t\t" << empName[index] << endl;
     }
-    if (!found)
+    else
     {
         cout << "\nEmployee Not Found!\n\n";
     }
@@ -111,22 +96,19 @@ void searchEmployee()
 void deleteEmployee()
 {
     string id;
-    bool found = false;
     cin.ignore();
     cout << "\nEnter the employee ID: ";
     getline(cin, id);
-
-    for (int i = 0; i < maxrow; i++)
+    vector<string>::iterator i = find(empID.begin(), empID.end(), id);
+    if (i != empID.end()) // employee found
     {
-        if (empID[i] == id)
-        {
-            empID[i] = "";
-            empName[i] = "";
-            cout << "\nDeleted employee succefully!\n\n";
-            break;
-        }
+        int index = distance(empID.begin(), i);
+        empID[index] = "";
+        empName[index] = "";
+        cout << "\nDeleted employee succefully!\n\n";
+        break;
     }
-    if (!found)
+    else
     {
         cout << "\nEmployee Not Found!\n\n";
     }
@@ -135,28 +117,24 @@ void deleteEmployee()
 void updateEmployee()
 {
     string id, newID, newName;
-    bool found = false;
     cin.ignore();
     cout << "\nWhat's the Employee ID? ";
     getline(cin, id);
     // Search
-    for (int i = 0; i < maxrow; i++)
+    vector<string>::iterator i = find(empID.begin(), empID.end(), id);
+    if (i != empID.end())
     {
-        if (empID[i] == id)
-        {
-            found = true;
-            cout << "\nEnter new employee ID: ";
-            getline(cin, newID);
-            cout << "\nEnter new employee Name: ";
-            getline(cin, newName);
-            empName[i] = newName;
-            empID[i] = newID;
-            cout << "\n\nEmployee Updated Successfully\n\n";
-            viewEmployees();
-            break;
-        }
+        int index = distance(empID.begin(), i);
+        cout << "\nEnter new employee ID: ";
+        getline(cin, newID);
+        cout << "\nEnter new employee Name: ";
+        getline(cin, newName);
+        empName[index] = newName;
+        empID[index] = newID;
+        cout << "\n\nEmployee Updated Successfully\n\n";
+        viewEmployees();
     }
-    if (!found)
+    else
     {
         cout << "\nEmployee Not Found!\n\n";
     }
@@ -164,7 +142,7 @@ void updateEmployee()
 
 int main()
 {
-    openFile();
+    // openFile();
     int choice;
     do
     {
@@ -208,6 +186,6 @@ int main()
     } while (choice != 6);
     cout << endl;
 end:;
-    saveFile();
+    // saveFile();
     return 0;
 }
