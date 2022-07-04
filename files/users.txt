@@ -1,0 +1,5 @@
+Peace,19,Chairperson
+Egide,17,CEO
+Stecie,19,CEO
+Daniel,20,CEO
+Sam,18,CEO
