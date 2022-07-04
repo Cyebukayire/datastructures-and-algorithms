@@ -28,29 +28,24 @@ int main()
             int k = 1;
             while (ss.good())
             {
-
                 string substr;
                 getline(ss, substr, ',');
                 if (k == 1)
                 {
-                    // cout << "\n\nk 1: " << k << endl;
                     user.name = substr;
                 }
                 else if (k == 2)
                 {
-                    // cout << "\nk 2: " << k << endl;
                     user.age = stoi(substr);
                 }
                 else if (k == 3)
                 {
-                    // cout << "\nk 3: " << k << endl;
                     user.title = substr;
                 }
                 k++;
             }
             users.push_back(user);
         }
-
         // output
         for (User user : users)
         {
@@ -59,7 +54,6 @@ int main()
                  << "Age: " << user.age << endl
                  << "Title: " << user.title << endl;
         }
-
         file.close();
         return 0;
     }
