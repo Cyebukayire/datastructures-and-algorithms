@@ -15,7 +15,7 @@ int main()
     it2 -= 1;
     // it2--;
 
-    myvector.erase(it1, it2);
+    myvector.erase(2, 2);
 
     // Printing the Vector
     for (auto it = myvector.begin(); it != myvector.end(); ++it)
