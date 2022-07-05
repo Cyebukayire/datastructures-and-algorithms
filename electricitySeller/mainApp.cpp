@@ -108,6 +108,7 @@ void delete_meter(int meterNum)
         file.close();
     }
 }
+
 int main()
 {
     vector<Meter> meters = get_all_meters();
