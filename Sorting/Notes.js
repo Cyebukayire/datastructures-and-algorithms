@@ -9,7 +9,7 @@
  * 
  * 
  * Selection(
- * form 2 arrarys, sorted and unsorted arrays
+ * form 2 arrays, sorted and unsorted arrays
  * selects the smallest element from the unsorted array
  * )
  
