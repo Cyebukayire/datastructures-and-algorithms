@@ -23,8 +23,6 @@ class Fibonacci{
     }
     public static void main(String []arg){
         ArrayList <Integer> arr = fibonacci(250);
-        for(int i=0; i<arr.size(); i++){
-            System.out.println(arr.get(i));
-        }
+        System.out.println(arr);
     }
 }
