@@ -1,3 +1,5 @@
+package FibonacciSeriece;
+
 /**
  * Fibonacci series is a sequence of numbers starting from zero up to n. Where each number is
  * is the sum of the two previous ones.
