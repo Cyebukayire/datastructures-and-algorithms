@@ -1,19 +1,19 @@
 package FibonacciSeriece;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 class Try {
     public static ArrayList<Integer> tryMe(int n){
         ArrayList<Integer> arr = new ArrayList<Integer>();
-        int i=0, k=0;
+        int k=0, num1=0, num2=1, num3;
+
         while(k<n){
-            if(i<=1){
-                arr.add(i);
-            }else{
-                k = arr.get(i-1) + arr.get(i-2);
-                arr.add(k);
-            }
-            i++;
+            num3 = num1 + num2;
+            arr.addAll(Arrays.asList(num1, num2, num3));
+            num1 = num2;
+            num2 = num3;
+            k=num3;
         }
 
         return arr;

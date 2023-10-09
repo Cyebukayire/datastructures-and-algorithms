@@ -6,7 +6,7 @@ package FibonacciSeriece;
  */
 import java.util.ArrayList;
 
-class Fibonacci{
+class withLoop{
     public static ArrayList<Integer> fibonacci(int n){
         ArrayList <Integer> arr = new ArrayList<Integer>();
 
